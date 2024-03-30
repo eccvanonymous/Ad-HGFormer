@@ -765,7 +765,7 @@ class Ad_HGformer(nn.Module):
     
 
     ##################-----------Process_Input-----------##################
-    def Process_Input(x):                           
+    def Process_Input(self, x):                           
         n,c,t,v,m=x.size()
         inp=x.permute(0,4,3,1,2)
         inp=torch.reshape(inp,(n*m,v,c,t))
